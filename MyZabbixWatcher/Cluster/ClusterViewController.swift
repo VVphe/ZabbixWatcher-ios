@@ -18,6 +18,7 @@ class ClusterViewController: UITableViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        navigationItem.title = "Clusters"
         setup()
     }
     //
@@ -101,6 +102,16 @@ extension ClusterViewController {
             tableView.beginUpdates()
             tableView.endUpdates()
         }, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { (action, index) in
+            print("delete")
+        }
+        
+        delete.backgroundColor = UIColor.red
+        
+        return [delete]
     }
 
 }

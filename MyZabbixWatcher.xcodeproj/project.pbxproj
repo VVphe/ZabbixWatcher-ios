@@ -55,6 +55,11 @@
 		1863DD0420C043850012C1A2 /* goCluster.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863DD0320C043850012C1A2 /* goCluster.png */; };
 		1863DD0720C046D90012C1A2 /* Cluster.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1863DD0620C046D90012C1A2 /* Cluster.storyboard */; };
 		1863DD0920C048240012C1A2 /* ClusterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DD0820C048240012C1A2 /* ClusterViewController.swift */; };
+		1863DD0C20C1343A0012C1A2 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DD0B20C1343A0012C1A2 /* HostViewController.swift */; };
+		1863DD0E20C13FB20012C1A2 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DD0D20C13FB20012C1A2 /* CardCell.swift */; };
+		1863DD1020C13FCB0012C1A2 /* Hosts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1863DD0F20C13FCB0012C1A2 /* Hosts.storyboard */; };
+		1863DD1220C192B80012C1A2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DD1120C192B80012C1A2 /* Extensions.swift */; };
+		1863DD1420C19B870012C1A2 /* CardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DD1320C19B870012C1A2 /* CardLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +134,11 @@
 		1863DD0320C043850012C1A2 /* goCluster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goCluster.png; sourceTree = "<group>"; };
 		1863DD0620C046D90012C1A2 /* Cluster.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cluster.storyboard; sourceTree = "<group>"; };
 		1863DD0820C048240012C1A2 /* ClusterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterViewController.swift; sourceTree = "<group>"; };
+		1863DD0B20C1343A0012C1A2 /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		1863DD0D20C13FB20012C1A2 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		1863DD0F20C13FCB0012C1A2 /* Hosts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hosts.storyboard; sourceTree = "<group>"; };
+		1863DD1120C192B80012C1A2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1863DD1320C19B870012C1A2 /* CardLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +189,7 @@
 		1863DC8020C02EFF0012C1A2 /* MyZabbixWatcher */ = {
 			isa = PBXGroup;
 			children = (
+				1863DD0A20C121720012C1A2 /* Host */,
 				1863DD0520C046CB0012C1A2 /* Cluster */,
 				1863DCD220C0314B0012C1A2 /* resource */,
 				1863DCCB20C031090012C1A2 /* KnowMore */,
@@ -190,6 +201,7 @@
 				1863DC8820C02F010012C1A2 /* Assets.xcassets */,
 				1863DC8A20C02F010012C1A2 /* LaunchScreen.storyboard */,
 				1863DC8D20C02F010012C1A2 /* Info.plist */,
+				1863DD1120C192B80012C1A2 /* Extensions.swift */,
 			);
 			path = MyZabbixWatcher;
 			sourceTree = "<group>";
@@ -286,6 +298,17 @@
 				1863DD0820C048240012C1A2 /* ClusterViewController.swift */,
 			);
 			path = Cluster;
+			sourceTree = "<group>";
+		};
+		1863DD0A20C121720012C1A2 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				1863DD0B20C1343A0012C1A2 /* HostViewController.swift */,
+				1863DD0D20C13FB20012C1A2 /* CardCell.swift */,
+				1863DD0F20C13FCB0012C1A2 /* Hosts.storyboard */,
+				1863DD1320C19B870012C1A2 /* CardLayout.swift */,
+			);
+			path = Host;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +423,7 @@
 				1863DC8C20C02F010012C1A2 /* LaunchScreen.storyboard in Resources */,
 				1863DC8920C02F010012C1A2 /* Assets.xcassets in Resources */,
 				1863DCB720C0308A0012C1A2 /* bg.jpg in Resources */,
+				1863DD1020C13FCB0012C1A2 /* Hosts.storyboard in Resources */,
 				1863DCEB20C031850012C1A2 /* icon-vimeo.png in Resources */,
 				1863DCED20C031850012C1A2 /* icon-youtube.png in Resources */,
 				1863DCF720C031850012C1A2 /* fushi.png in Resources */,
@@ -446,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1863DCC520C030FB0012C1A2 /* MySideViewController.swift in Sources */,
+				1863DD1420C19B870012C1A2 /* CardLayout.swift in Sources */,
 				1863DCB820C0308A0012C1A2 /* VideoCutter.swift in Sources */,
 				1863DCC820C030FB0012C1A2 /* SideViewController.swift in Sources */,
 				1863DCFC20C031BF0012C1A2 /* LoginViewController.swift in Sources */,
@@ -455,10 +480,13 @@
 				1863DD0020C036230012C1A2 /* DetailViewController.swift in Sources */,
 				1863DCBB20C0308A0012C1A2 /* VideoSplashViewController.swift in Sources */,
 				1863DCCF20C031410012C1A2 /* MenuViewController.swift in Sources */,
+				1863DD0E20C13FB20012C1A2 /* CardCell.swift in Sources */,
 				1863DCB920C0308A0012C1A2 /* RegisterViewController.swift in Sources */,
 				1863DCC620C030FB0012C1A2 /* DemoCell.swift in Sources */,
 				1863DCD020C031410012C1A2 /* SocialItem.swift in Sources */,
 				1863DCC420C030FB0012C1A2 /* FoldingCell.swift in Sources */,
+				1863DD1220C192B80012C1A2 /* Extensions.swift in Sources */,
+				1863DD0C20C1343A0012C1A2 /* HostViewController.swift in Sources */,
 				1863DCCA20C030FB0012C1A2 /* SideHomeViewController.swift in Sources */,
 				1863DCD120C031410012C1A2 /* ZoomingIconTransition.swift in Sources */,
 				1863DD0920C048240012C1A2 /* ClusterViewController.swift in Sources */,

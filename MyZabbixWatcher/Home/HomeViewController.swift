@@ -102,6 +102,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 100
     }
 
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { (action, index) in
+            print("delete")
+        }
+        
+        delete.backgroundColor = UIColor.red
+        
+        return [delete]
+    }
+
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let otherVC = OtherViewController()
 //        otherVC.title = titleArray[indexPath.row]

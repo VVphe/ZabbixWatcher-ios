@@ -37,7 +37,13 @@ class DemoCell: FoldingCell {
 extension DemoCell {
     
     @IBAction func buttonHandler(_: AnyObject) {
-        print("tap")
+        let controller = UIStoryboard(name: "Hosts", bundle: nil).instantiateViewController(withIdentifier: "HostViewController") as! HostViewController
+        
+        let tableView = superTableView()
+        let tableViewController = tableView?.parentViewController() as! UINavigationController
+        
+        tableViewController.pushViewController(controller, animated: true)
+
     }
 }
 
