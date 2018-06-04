@@ -68,9 +68,9 @@ class LoginViewController: VideoSplashViewController{
     }
     
     @objc func goHomePage(sender: UIButton) {
-        let controller = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! SideViewController
+//        let controller = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! SideViewController
         //self.navigationController?.pushViewController(controller, animated: true)
-//        let controller = UIStoryboard(name: "Cluster", bundle: nil).instantiateViewController(withIdentifier: "ClusterViewController") as! ClusterViewController
+        let controller = UIStoryboard(name: "Items", bundle: nil).instantiateViewController(withIdentifier: "ItemViewController") as! ItemViewController
         //self.present(controller, animated: true, completion: nil)
         self.navigationController?.pushViewController(controller, animated: true)
     }

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180EF49520C28C4900448149 /* HostsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF49420C28C4900448149 /* HostsData.swift */; };
+		180EF49720C3BEB700448149 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF49620C3BEB700448149 /* ItemViewController.swift */; };
+		180EF49A20C3BEE700448149 /* Items.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180EF49920C3BEE700448149 /* Items.storyboard */; };
+		180EF49C20C3CF9E00448149 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF49B20C3CF9E00448149 /* LineChart.swift */; };
+		180EF49F20C4BFEC00448149 /* XView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF49E20C4BFEC00448149 /* XView.swift */; };
+		180EF4A120C4C3F900448149 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF4A020C4C3F900448149 /* Protocols.swift */; };
+		180EF4A320C52F6400448149 /* YView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF4A220C52F6400448149 /* YView.swift */; };
+		180EF4A520C543E000448149 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF4A420C543E000448149 /* LineView.swift */; };
+		180EF4A720C55E9400448149 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF4A620C55E9400448149 /* LineChartView.swift */; };
+		180EF4A920C563FE00448149 /* PointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF4A820C563FE00448149 /* PointItem.swift */; };
+		180EF4AD20C5703700448149 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180EF4AC20C5703700448149 /* test.storyboard */; };
 		1863DC8220C02EFF0012C1A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DC8120C02EFF0012C1A2 /* AppDelegate.swift */; };
 		1863DC8420C02EFF0012C1A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DC8320C02EFF0012C1A2 /* ViewController.swift */; };
 		1863DC8920C02F010012C1A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1863DC8820C02F010012C1A2 /* Assets.xcassets */; };
@@ -80,6 +91,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180EF49420C28C4900448149 /* HostsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsData.swift; sourceTree = "<group>"; };
+		180EF49620C3BEB700448149 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		180EF49920C3BEE700448149 /* Items.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Items.storyboard; sourceTree = "<group>"; };
+		180EF49B20C3CF9E00448149 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		180EF49E20C4BFEC00448149 /* XView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XView.swift; sourceTree = "<group>"; };
+		180EF4A020C4C3F900448149 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		180EF4A220C52F6400448149 /* YView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YView.swift; sourceTree = "<group>"; };
+		180EF4A420C543E000448149 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		180EF4A620C55E9400448149 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		180EF4A820C563FE00448149 /* PointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointItem.swift; sourceTree = "<group>"; };
+		180EF4AC20C5703700448149 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		1863DC7E20C02EFF0012C1A2 /* MyZabbixWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyZabbixWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1863DC8120C02EFF0012C1A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1863DC8320C02EFF0012C1A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +188,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180EF49820C3BEC200448149 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				180EF49D20C4BFD600448149 /* LineChart */,
+				180EF49620C3BEB700448149 /* ItemViewController.swift */,
+				180EF49920C3BEE700448149 /* Items.storyboard */,
+				180EF49B20C3CF9E00448149 /* LineChart.swift */,
+				180EF4A820C563FE00448149 /* PointItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		180EF49D20C4BFD600448149 /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				180EF49E20C4BFEC00448149 /* XView.swift */,
+				180EF4A020C4C3F900448149 /* Protocols.swift */,
+				180EF4A220C52F6400448149 /* YView.swift */,
+				180EF4A420C543E000448149 /* LineView.swift */,
+				180EF4A620C55E9400448149 /* LineChartView.swift */,
+				180EF4AC20C5703700448149 /* test.storyboard */,
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
 		1863DC7520C02EFF0012C1A2 = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +236,7 @@
 		1863DC8020C02EFF0012C1A2 /* MyZabbixWatcher */ = {
 			isa = PBXGroup;
 			children = (
+				180EF49820C3BEC200448149 /* Item */,
 				1863DD0A20C121720012C1A2 /* Host */,
 				1863DD0520C046CB0012C1A2 /* Cluster */,
 				1863DCD220C0314B0012C1A2 /* resource */,
@@ -307,6 +355,7 @@
 				1863DD0D20C13FB20012C1A2 /* CardCell.swift */,
 				1863DD0F20C13FCB0012C1A2 /* Hosts.storyboard */,
 				1863DD1320C19B870012C1A2 /* CardLayout.swift */,
+				180EF49420C28C4900448149 /* HostsData.swift */,
 			);
 			path = Host;
 			sourceTree = "<group>";
@@ -421,6 +470,7 @@
 				1863DCEA20C031850012C1A2 /* Finger.png in Resources */,
 				1863DCE920C031850012C1A2 /* icon-twitter.png in Resources */,
 				1863DC8C20C02F010012C1A2 /* LaunchScreen.storyboard in Resources */,
+				180EF4AD20C5703700448149 /* test.storyboard in Resources */,
 				1863DC8920C02F010012C1A2 /* Assets.xcassets in Resources */,
 				1863DCB720C0308A0012C1A2 /* bg.jpg in Resources */,
 				1863DD1020C13FCB0012C1A2 /* Hosts.storyboard in Resources */,
@@ -435,6 +485,7 @@
 				1863DD0720C046D90012C1A2 /* Cluster.storyboard in Resources */,
 				1863DCF020C031850012C1A2 /* 10.png in Resources */,
 				1863DCF220C031850012C1A2 /* 08.png in Resources */,
+				180EF49A20C3BEE700448149 /* Items.storyboard in Resources */,
 				1863DCFA20C031850012C1A2 /* yewan.png in Resources */,
 				1863DCE720C031850012C1A2 /* feng.png in Resources */,
 				1863DCFE20C0352D0012C1A2 /* KnowMore.storyboard in Resources */,
@@ -471,22 +522,31 @@
 			files = (
 				1863DCC520C030FB0012C1A2 /* MySideViewController.swift in Sources */,
 				1863DD1420C19B870012C1A2 /* CardLayout.swift in Sources */,
+				180EF4A720C55E9400448149 /* LineChartView.swift in Sources */,
 				1863DCB820C0308A0012C1A2 /* VideoCutter.swift in Sources */,
+				180EF49720C3BEB700448149 /* ItemViewController.swift in Sources */,
 				1863DCC820C030FB0012C1A2 /* SideViewController.swift in Sources */,
 				1863DCFC20C031BF0012C1A2 /* LoginViewController.swift in Sources */,
 				1863DC8420C02EFF0012C1A2 /* ViewController.swift in Sources */,
 				1863DC8220C02EFF0012C1A2 /* AppDelegate.swift in Sources */,
 				1863DCC920C030FB0012C1A2 /* HomeViewController.swift in Sources */,
+				180EF4A120C4C3F900448149 /* Protocols.swift in Sources */,
 				1863DD0020C036230012C1A2 /* DetailViewController.swift in Sources */,
+				180EF49520C28C4900448149 /* HostsData.swift in Sources */,
+				180EF4A520C543E000448149 /* LineView.swift in Sources */,
 				1863DCBB20C0308A0012C1A2 /* VideoSplashViewController.swift in Sources */,
 				1863DCCF20C031410012C1A2 /* MenuViewController.swift in Sources */,
 				1863DD0E20C13FB20012C1A2 /* CardCell.swift in Sources */,
 				1863DCB920C0308A0012C1A2 /* RegisterViewController.swift in Sources */,
 				1863DCC620C030FB0012C1A2 /* DemoCell.swift in Sources */,
 				1863DCD020C031410012C1A2 /* SocialItem.swift in Sources */,
+				180EF4A320C52F6400448149 /* YView.swift in Sources */,
 				1863DCC420C030FB0012C1A2 /* FoldingCell.swift in Sources */,
 				1863DD1220C192B80012C1A2 /* Extensions.swift in Sources */,
+				180EF4A920C563FE00448149 /* PointItem.swift in Sources */,
 				1863DD0C20C1343A0012C1A2 /* HostViewController.swift in Sources */,
+				180EF49C20C3CF9E00448149 /* LineChart.swift in Sources */,
+				180EF49F20C4BFEC00448149 /* XView.swift in Sources */,
 				1863DCCA20C030FB0012C1A2 /* SideHomeViewController.swift in Sources */,
 				1863DCD120C031410012C1A2 /* ZoomingIconTransition.swift in Sources */,
 				1863DD0920C048240012C1A2 /* ClusterViewController.swift in Sources */,
