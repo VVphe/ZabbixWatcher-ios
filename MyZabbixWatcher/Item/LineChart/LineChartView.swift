@@ -16,7 +16,7 @@ class LineChartView: UIView {
     
     var yWidth: Float = 50
     var xHeight: Float = 30
-    var xInterval: Float = 50
+    var xInterval: Float = 80
     var xElements = 0
     var axisAttributes: AxisAttributes?
     

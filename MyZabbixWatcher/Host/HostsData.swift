@@ -8,6 +8,6 @@
 
 import Foundation
 
-var HostsData = [
-     "Host1", "Host2","Host3","Host4" ,"Host5","Host6","Host7","Host8","Host9","Host10"
-]
+var HostsData1 = "[{\"hostid\": \"10081\", \"name\": \"host1\", \"decription\": \"\", \"status\": \"normal\", \"error\": \"none\", \"group\": \"Zabbix server\", \"available\": \"yes\"}, {\"hostid\": \"10082\", \"name\": \"host2\", \"decription\": \"\", \"status\": \"normal\", \"error\": \"none\", \"group\": \"Zabbix server\", \"available\": \"yes\"}, {\"hostid\": \"10083\", \"name\": \"host3\", \"decription\": \"\", \"status\": \"normal\", \"error\": \"none\", \"group\": \"Zabbix server\", \"available\": \"yes\"}, {\"hostid\": \"10084\", \"name\": \"host4\", \"decription\": \"\", \"status\": \"normal\", \"error\": \"none\", \"group\": \"Zabbix server\", \"available\": \"yes\"}, {\"hostid\": \"10085\", \"name\": \"host5\", \"decription\": \"\", \"status\": \"normal\", \"error\": \"none\", \"group\": \"Zabbix server\", \"available\": \"yes\"}]"
+
+var HostsData = ["host1", "host2"]

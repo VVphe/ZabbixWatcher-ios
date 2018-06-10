@@ -11,19 +11,17 @@ import UIKit
 class MySideViewController: UIViewController {
     
     static let TABLEVIEWCELLIDENTIFIER = "TABLEVIEWCELLIDENTIFIER"
-    let titleArray = ["My zabbix", "关于zabbix", "设置", "退出登录"]
-    let imageArray = ["02", "04", "07", "05"]
+    let titleArray = ["My zabbix", "关于zabbix", "退出登录"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Register"
         view.backgroundColor = .white
         view.addSubview(backImage)
         view.addSubview(rootTableView)
     }
     
     lazy var backImage : UIImageView = { [unowned self] in
-        var image = UIImageView(image: UIImage(named: "image.jpeg"))
+        var image = UIImageView(image: UIImage(named: "starground.jpeg"))
         image.frame = self.view.bounds
         image.alpha = 0.85
         return image
@@ -56,7 +54,6 @@ extension MySideViewController : UITableViewDelegate, UITableViewDataSource
         cell.backgroundColor = .clear
         cell.textLabel?.textColor = .white
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        cell.imageView?.image =    UIImage(named: imageArray[indexPath.row])
         cell.textLabel?.text = titleArray[indexPath.row]
         return cell
     }

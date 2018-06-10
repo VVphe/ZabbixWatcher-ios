@@ -1,0 +1,6 @@
+framework module Pods_MyZabbixWatcher {
+  umbrella header "Pods-MyZabbixWatcher-umbrella.h"
+
+  export *
+  module * { export * }
+}

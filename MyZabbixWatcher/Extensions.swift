@@ -19,6 +19,17 @@ extension UITableViewCell {
     }
 }
 
+extension UICollectionViewCell {
+    func superCollectionView() -> UICollectionView? {
+        for view in sequence(first: self.superview, next: { $0?.superview }) {
+            if let collectionView = view as? UICollectionView {
+                return collectionView
+            }
+        }
+        return nil
+    }
+}
+
 extension UIView {
     func parentViewController() -> UIViewController? {
         var next = self.superview

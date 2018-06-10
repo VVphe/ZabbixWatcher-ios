@@ -17,7 +17,12 @@
 		180EF4A520C543E000448149 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF4A420C543E000448149 /* LineView.swift */; };
 		180EF4A720C55E9400448149 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF4A620C55E9400448149 /* LineChartView.swift */; };
 		180EF4A920C563FE00448149 /* PointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF4A820C563FE00448149 /* PointItem.swift */; };
-		180EF4AD20C5703700448149 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180EF4AC20C5703700448149 /* test.storyboard */; };
+		1813825D20CA7767002B5590 /* ItemViewHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813825C20CA7767002B5590 /* ItemViewHistoryController.swift */; };
+		1813826120CADB08002B5590 /* ClusterAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813826020CADB08002B5590 /* ClusterAddViewController.swift */; };
+		1813826320CAEE71002B5590 /* ClusterAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1813826220CAEE71002B5590 /* ClusterAdd.storyboard */; };
+		1813826620CAEFFA002B5590 /* HostAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813826520CAEFFA002B5590 /* HostAddViewController.swift */; };
+		1813826820CAF006002B5590 /* HostAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1813826720CAF006002B5590 /* HostAdd.storyboard */; };
+		1813826A20CBBE38002B5590 /* ClusterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813826920CBBE38002B5590 /* ClusterData.swift */; };
 		1863DC8220C02EFF0012C1A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DC8120C02EFF0012C1A2 /* AppDelegate.swift */; };
 		1863DC8420C02EFF0012C1A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DC8320C02EFF0012C1A2 /* ViewController.swift */; };
 		1863DC8920C02F010012C1A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1863DC8820C02F010012C1A2 /* Assets.xcassets */; };
@@ -71,6 +76,17 @@
 		1863DD1020C13FCB0012C1A2 /* Hosts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1863DD0F20C13FCB0012C1A2 /* Hosts.storyboard */; };
 		1863DD1220C192B80012C1A2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DD1120C192B80012C1A2 /* Extensions.swift */; };
 		1863DD1420C19B870012C1A2 /* CardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863DD1320C19B870012C1A2 /* CardLayout.swift */; };
+		1869993F20CD1D1E0024618B /* sidegroud.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1869993E20CD1D1E0024618B /* sidegroud.jpeg */; };
+		1869994120CD1E700024618B /* starground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1869994020CD1E700024618B /* starground.jpeg */; };
+		1869994320CD22B40024618B /* yellow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1869994220CD22B40024618B /* yellow.jpg */; };
+		1869994520CD22BD0024618B /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1869994420CD22BD0024618B /* red.jpg */; };
+		1869994A20CD2FAD0024618B /* mainbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1869994920CD2FAD0024618B /* mainbg.mp4 */; };
+		18DD07CB20CBFE2400C2D826 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18DD07CA20CBFE2400C2D826 /* timg.jpeg */; };
+		18EF4EA420C7DBA000C7932F /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF4EA320C7DBA000C7932F /* ItemData.swift */; };
+		18EF4EA620C94E5500C7932F /* ItemTemplate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18EF4EA520C94E5500C7932F /* ItemTemplate.plist */; };
+		A71B63AADD3275BD6337B893 /* Pods_MyZabbixWatcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AE4858E71E8AB47B9C9C1E /* Pods_MyZabbixWatcherTests.framework */; };
+		BF691AEBDEF467B0F41D43A6 /* Pods_MyZabbixWatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D626F034D70EA78D2B1ED921 /* Pods_MyZabbixWatcher.framework */; };
+		FC35804AD3C788221B186A0D /* Pods_MyZabbixWatcherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396AF6AF810311430EB065F /* Pods_MyZabbixWatcherUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +117,12 @@
 		180EF4A420C543E000448149 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		180EF4A620C55E9400448149 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		180EF4A820C563FE00448149 /* PointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointItem.swift; sourceTree = "<group>"; };
-		180EF4AC20C5703700448149 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		1813825C20CA7767002B5590 /* ItemViewHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewHistoryController.swift; sourceTree = "<group>"; };
+		1813826020CADB08002B5590 /* ClusterAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAddViewController.swift; sourceTree = "<group>"; };
+		1813826220CAEE71002B5590 /* ClusterAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClusterAdd.storyboard; sourceTree = "<group>"; };
+		1813826520CAEFFA002B5590 /* HostAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostAddViewController.swift; sourceTree = "<group>"; };
+		1813826720CAF006002B5590 /* HostAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HostAdd.storyboard; sourceTree = "<group>"; };
+		1813826920CBBE38002B5590 /* ClusterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterData.swift; sourceTree = "<group>"; };
 		1863DC7E20C02EFF0012C1A2 /* MyZabbixWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyZabbixWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1863DC8120C02EFF0012C1A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1863DC8320C02EFF0012C1A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +182,23 @@
 		1863DD0F20C13FCB0012C1A2 /* Hosts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hosts.storyboard; sourceTree = "<group>"; };
 		1863DD1120C192B80012C1A2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1863DD1320C19B870012C1A2 /* CardLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLayout.swift; sourceTree = "<group>"; };
+		1869993E20CD1D1E0024618B /* sidegroud.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sidegroud.jpeg; sourceTree = "<group>"; };
+		1869994020CD1E700024618B /* starground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starground.jpeg; sourceTree = "<group>"; };
+		1869994220CD22B40024618B /* yellow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yellow.jpg; sourceTree = "<group>"; };
+		1869994420CD22BD0024618B /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
+		1869994920CD2FAD0024618B /* mainbg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = mainbg.mp4; path = MyZabbixWatcher/resource/mainbg.mp4; sourceTree = SOURCE_ROOT; };
+		18DD07CA20CBFE2400C2D826 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
+		18EF4EA320C7DBA000C7932F /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
+		18EF4EA520C94E5500C7932F /* ItemTemplate.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ItemTemplate.plist; sourceTree = "<group>"; };
+		377829424A345BCAB2554631 /* Pods-MyZabbixWatcherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyZabbixWatcherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyZabbixWatcherUITests/Pods-MyZabbixWatcherUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5E2BED3CDD80A984913F9509 /* Pods-MyZabbixWatcherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyZabbixWatcherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyZabbixWatcherUITests/Pods-MyZabbixWatcherUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A2B8E6D9FC6E024BD095E03 /* Pods-MyZabbixWatcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyZabbixWatcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyZabbixWatcherTests/Pods-MyZabbixWatcherTests.release.xcconfig"; sourceTree = "<group>"; };
+		A0AE4858E71E8AB47B9C9C1E /* Pods_MyZabbixWatcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyZabbixWatcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C385D43057C9E99F20CCA702 /* Pods-MyZabbixWatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyZabbixWatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyZabbixWatcher/Pods-MyZabbixWatcher.debug.xcconfig"; sourceTree = "<group>"; };
+		D626F034D70EA78D2B1ED921 /* Pods_MyZabbixWatcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyZabbixWatcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F396AF6AF810311430EB065F /* Pods_MyZabbixWatcherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyZabbixWatcherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD94F6A4E2810DD23346E9D8 /* Pods-MyZabbixWatcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyZabbixWatcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyZabbixWatcherTests/Pods-MyZabbixWatcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE876143F4BF67C128A350E1 /* Pods-MyZabbixWatcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyZabbixWatcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyZabbixWatcher/Pods-MyZabbixWatcher.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF691AEBDEF467B0F41D43A6 /* Pods_MyZabbixWatcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71B63AADD3275BD6337B893 /* Pods_MyZabbixWatcherTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC35804AD3C788221B186A0D /* Pods_MyZabbixWatcherUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,11 +232,14 @@
 		180EF49820C3BEC200448149 /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				18EF4EA520C94E5500C7932F /* ItemTemplate.plist */,
 				180EF49D20C4BFD600448149 /* LineChart */,
 				180EF49620C3BEB700448149 /* ItemViewController.swift */,
 				180EF49920C3BEE700448149 /* Items.storyboard */,
 				180EF49B20C3CF9E00448149 /* LineChart.swift */,
 				180EF4A820C563FE00448149 /* PointItem.swift */,
+				18EF4EA320C7DBA000C7932F /* ItemData.swift */,
+				1813825C20CA7767002B5590 /* ItemViewHistoryController.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -208,9 +252,26 @@
 				180EF4A220C52F6400448149 /* YView.swift */,
 				180EF4A420C543E000448149 /* LineView.swift */,
 				180EF4A620C55E9400448149 /* LineChartView.swift */,
-				180EF4AC20C5703700448149 /* test.storyboard */,
 			);
 			path = LineChart;
+			sourceTree = "<group>";
+		};
+		1813825E20CADA7F002B5590 /* ClusterAdd */ = {
+			isa = PBXGroup;
+			children = (
+				1813826020CADB08002B5590 /* ClusterAddViewController.swift */,
+				1813826220CAEE71002B5590 /* ClusterAdd.storyboard */,
+			);
+			path = ClusterAdd;
+			sourceTree = "<group>";
+		};
+		1813825F20CADAD8002B5590 /* HostAdd */ = {
+			isa = PBXGroup;
+			children = (
+				1813826520CAEFFA002B5590 /* HostAddViewController.swift */,
+				1813826720CAF006002B5590 /* HostAdd.storyboard */,
+			);
+			path = HostAdd;
 			sourceTree = "<group>";
 		};
 		1863DC7520C02EFF0012C1A2 = {
@@ -220,6 +281,8 @@
 				1863DC9520C02F020012C1A2 /* MyZabbixWatcherTests */,
 				1863DCA020C02F020012C1A2 /* MyZabbixWatcherUITests */,
 				1863DC7F20C02EFF0012C1A2 /* Products */,
+				6E0B263FD7379A01A4C19931 /* Pods */,
+				5C87553FAB737642D8CB4D1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +299,8 @@
 		1863DC8020C02EFF0012C1A2 /* MyZabbixWatcher */ = {
 			isa = PBXGroup;
 			children = (
+				1813825F20CADAD8002B5590 /* HostAdd */,
+				1813825E20CADA7F002B5590 /* ClusterAdd */,
 				180EF49820C3BEC200448149 /* Item */,
 				1863DD0A20C121720012C1A2 /* Host */,
 				1863DD0520C046CB0012C1A2 /* Cluster */,
@@ -275,6 +340,7 @@
 		1863DCB120C02FB40012C1A2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1869994920CD2FAD0024618B /* mainbg.mp4 */,
 				1863DCFB20C031BF0012C1A2 /* LoginViewController.swift */,
 				1863DCB220C0308A0012C1A2 /* bg.jpg */,
 				1863DCB420C0308A0012C1A2 /* RegisterViewController.swift */,
@@ -312,6 +378,9 @@
 		1863DCD220C0314B0012C1A2 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				1869994020CD1E700024618B /* starground.jpeg */,
+				18DD07CA20CBFE2400C2D826 /* timg.jpeg */,
+				1869993E20CD1D1E0024618B /* sidegroud.jpeg */,
 				1863DD0320C043850012C1A2 /* goCluster.png */,
 				1863DCDB20C031840012C1A2 /* 07.png */,
 				1863DCDE20C031840012C1A2 /* 08.png */,
@@ -327,9 +396,11 @@
 				1863DCE520C031850012C1A2 /* icon-instagram.png */,
 				1863DCD520C031840012C1A2 /* icon-twitter.png */,
 				1863DCD720C031840012C1A2 /* icon-vimeo.png */,
+				1869994420CD22BD0024618B /* red.jpg */,
 				1863DCD920C031840012C1A2 /* icon-youtube.png */,
 				1863DCDA20C031840012C1A2 /* ID.png */,
 				1863DCE020C031840012C1A2 /* image.jpeg */,
+				1869994220CD22B40024618B /* yellow.jpg */,
 				1863DCD420C031840012C1A2 /* Locked.png */,
 				1863DCE220C031840012C1A2 /* shan.png */,
 				1863DCE620C031850012C1A2 /* yewan.png */,
@@ -344,6 +415,7 @@
 				1863DCBD20C030FB0012C1A2 /* FoldingCell.swift */,
 				1863DD0620C046D90012C1A2 /* Cluster.storyboard */,
 				1863DD0820C048240012C1A2 /* ClusterViewController.swift */,
+				1813826920CBBE38002B5590 /* ClusterData.swift */,
 			);
 			path = Cluster;
 			sourceTree = "<group>";
@@ -360,6 +432,29 @@
 			path = Host;
 			sourceTree = "<group>";
 		};
+		5C87553FAB737642D8CB4D1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D626F034D70EA78D2B1ED921 /* Pods_MyZabbixWatcher.framework */,
+				A0AE4858E71E8AB47B9C9C1E /* Pods_MyZabbixWatcherTests.framework */,
+				F396AF6AF810311430EB065F /* Pods_MyZabbixWatcherUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E0B263FD7379A01A4C19931 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C385D43057C9E99F20CCA702 /* Pods-MyZabbixWatcher.debug.xcconfig */,
+				FE876143F4BF67C128A350E1 /* Pods-MyZabbixWatcher.release.xcconfig */,
+				FD94F6A4E2810DD23346E9D8 /* Pods-MyZabbixWatcherTests.debug.xcconfig */,
+				6A2B8E6D9FC6E024BD095E03 /* Pods-MyZabbixWatcherTests.release.xcconfig */,
+				5E2BED3CDD80A984913F9509 /* Pods-MyZabbixWatcherUITests.debug.xcconfig */,
+				377829424A345BCAB2554631 /* Pods-MyZabbixWatcherUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,9 +462,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1863DCA620C02F020012C1A2 /* Build configuration list for PBXNativeTarget "MyZabbixWatcher" */;
 			buildPhases = (
+				6768814EB7094D60429DE516 /* [CP] Check Pods Manifest.lock */,
 				1863DC7A20C02EFF0012C1A2 /* Sources */,
 				1863DC7B20C02EFF0012C1A2 /* Frameworks */,
 				1863DC7C20C02EFF0012C1A2 /* Resources */,
+				E739951978842A8B620589C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,6 +481,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1863DCA920C02F020012C1A2 /* Build configuration list for PBXNativeTarget "MyZabbixWatcherTests" */;
 			buildPhases = (
+				11EC095C1BC7205FA07650A7 /* [CP] Check Pods Manifest.lock */,
 				1863DC8E20C02F020012C1A2 /* Sources */,
 				1863DC8F20C02F020012C1A2 /* Frameworks */,
 				1863DC9020C02F020012C1A2 /* Resources */,
@@ -402,6 +500,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1863DCAC20C02F020012C1A2 /* Build configuration list for PBXNativeTarget "MyZabbixWatcherUITests" */;
 			buildPhases = (
+				E25EC5F925D7FAA7912D0099 /* [CP] Check Pods Manifest.lock */,
 				1863DC9920C02F020012C1A2 /* Sources */,
 				1863DC9A20C02F020012C1A2 /* Frameworks */,
 				1863DC9B20C02F020012C1A2 /* Resources */,
@@ -464,19 +563,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1813826820CAF006002B5590 /* HostAdd.storyboard in Resources */,
 				1863DCEF20C031850012C1A2 /* 07.png in Resources */,
+				1813826320CAEE71002B5590 /* ClusterAdd.storyboard in Resources */,
 				1863DCF620C031850012C1A2 /* shan.png in Resources */,
+				18EF4EA620C94E5500C7932F /* ItemTemplate.plist in Resources */,
 				1863DCF420C031850012C1A2 /* image.jpeg in Resources */,
+				1869994120CD1E700024618B /* starground.jpeg in Resources */,
+				1869994320CD22B40024618B /* yellow.jpg in Resources */,
 				1863DCEA20C031850012C1A2 /* Finger.png in Resources */,
 				1863DCE920C031850012C1A2 /* icon-twitter.png in Resources */,
 				1863DC8C20C02F010012C1A2 /* LaunchScreen.storyboard in Resources */,
-				180EF4AD20C5703700448149 /* test.storyboard in Resources */,
 				1863DC8920C02F010012C1A2 /* Assets.xcassets in Resources */,
+				1869994520CD22BD0024618B /* red.jpg in Resources */,
 				1863DCB720C0308A0012C1A2 /* bg.jpg in Resources */,
 				1863DD1020C13FCB0012C1A2 /* Hosts.storyboard in Resources */,
 				1863DCEB20C031850012C1A2 /* icon-vimeo.png in Resources */,
 				1863DCED20C031850012C1A2 /* icon-youtube.png in Resources */,
 				1863DCF720C031850012C1A2 /* fushi.png in Resources */,
+				18DD07CB20CBFE2400C2D826 /* timg.jpeg in Resources */,
 				1863DCF820C031850012C1A2 /* haidi.png in Resources */,
 				1863DCF920C031850012C1A2 /* icon-instagram.png in Resources */,
 				1863DCF320C031850012C1A2 /* 11.png in Resources */,
@@ -489,6 +594,8 @@
 				1863DCFA20C031850012C1A2 /* yewan.png in Resources */,
 				1863DCE720C031850012C1A2 /* feng.png in Resources */,
 				1863DCFE20C0352D0012C1A2 /* KnowMore.storyboard in Resources */,
+				1869994A20CD2FAD0024618B /* mainbg.mp4 in Resources */,
+				1869993F20CD1D1E0024618B /* sidegroud.jpeg in Resources */,
 				1863DCBA20C0308A0012C1A2 /* spotify.mp4 in Resources */,
 				1863DCF120C031850012C1A2 /* 13.png in Resources */,
 				1863DCF520C031850012C1A2 /* icon-facebook.png in Resources */,
@@ -515,6 +622,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11EC095C1BC7205FA07650A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyZabbixWatcherTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6768814EB7094D60429DE516 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyZabbixWatcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E25EC5F925D7FAA7912D0099 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyZabbixWatcherUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E739951978842A8B620589C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyZabbixWatcher/Pods-MyZabbixWatcher-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftForms/SwiftForms.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftForms.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyZabbixWatcher/Pods-MyZabbixWatcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1863DC7A20C02EFF0012C1A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -531,10 +719,12 @@
 				1863DC8220C02EFF0012C1A2 /* AppDelegate.swift in Sources */,
 				1863DCC920C030FB0012C1A2 /* HomeViewController.swift in Sources */,
 				180EF4A120C4C3F900448149 /* Protocols.swift in Sources */,
+				1813826120CADB08002B5590 /* ClusterAddViewController.swift in Sources */,
 				1863DD0020C036230012C1A2 /* DetailViewController.swift in Sources */,
 				180EF49520C28C4900448149 /* HostsData.swift in Sources */,
 				180EF4A520C543E000448149 /* LineView.swift in Sources */,
 				1863DCBB20C0308A0012C1A2 /* VideoSplashViewController.swift in Sources */,
+				18EF4EA420C7DBA000C7932F /* ItemData.swift in Sources */,
 				1863DCCF20C031410012C1A2 /* MenuViewController.swift in Sources */,
 				1863DD0E20C13FB20012C1A2 /* CardCell.swift in Sources */,
 				1863DCB920C0308A0012C1A2 /* RegisterViewController.swift in Sources */,
@@ -542,9 +732,12 @@
 				1863DCD020C031410012C1A2 /* SocialItem.swift in Sources */,
 				180EF4A320C52F6400448149 /* YView.swift in Sources */,
 				1863DCC420C030FB0012C1A2 /* FoldingCell.swift in Sources */,
+				1813826A20CBBE38002B5590 /* ClusterData.swift in Sources */,
 				1863DD1220C192B80012C1A2 /* Extensions.swift in Sources */,
 				180EF4A920C563FE00448149 /* PointItem.swift in Sources */,
 				1863DD0C20C1343A0012C1A2 /* HostViewController.swift in Sources */,
+				1813825D20CA7767002B5590 /* ItemViewHistoryController.swift in Sources */,
+				1813826620CAEFFA002B5590 /* HostAddViewController.swift in Sources */,
 				180EF49C20C3CF9E00448149 /* LineChart.swift in Sources */,
 				180EF49F20C4BFEC00448149 /* XView.swift in Sources */,
 				1863DCCA20C030FB0012C1A2 /* SideHomeViewController.swift in Sources */,
@@ -712,6 +905,7 @@
 		};
 		1863DCA720C02F020012C1A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C385D43057C9E99F20CCA702 /* Pods-MyZabbixWatcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -730,6 +924,7 @@
 		};
 		1863DCA820C02F020012C1A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE876143F4BF67C128A350E1 /* Pods-MyZabbixWatcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -748,6 +943,7 @@
 		};
 		1863DCAA20C02F020012C1A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD94F6A4E2810DD23346E9D8 /* Pods-MyZabbixWatcherTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -769,6 +965,7 @@
 		};
 		1863DCAB20C02F020012C1A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A2B8E6D9FC6E024BD095E03 /* Pods-MyZabbixWatcherTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -790,6 +987,7 @@
 		};
 		1863DCAD20C02F020012C1A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E2BED3CDD80A984913F9509 /* Pods-MyZabbixWatcherUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -810,6 +1008,7 @@
 		};
 		1863DCAE20C02F020012C1A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 377829424A345BCAB2554631 /* Pods-MyZabbixWatcherUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

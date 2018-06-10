@@ -31,19 +31,8 @@ class HomeViewController:  UIViewController {
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: HomeViewController.ROOTTABLEVIEWCELLIDENTIFIER)
         return tableView
         }()
-    lazy var timeArray: [String] = {
-        var array = ["2018-5-25", "2018-5-26", "2018-5-27", "2018-5-28", "2018-5-29", "2018-5-30"]
-        return array
-    }()
-    lazy var titleArray : [String] = {
-        var array = ["ubuntu3 内存不足", "ubuntu2 磁盘容量不足5%", "ubuntu4 出流量过大", "ubuntu5 inode空间不足", "ubuntu1 cpu占用过高", "ubuntu6 内存不足"]
-        return array
-    }()
-    let imageArray : [String] = {
-        let array = ["yewan", "shan", "feng", "chang", "fushi", "haidi"]
-        return array
-    }()
-    
+    lazy var timeArray: [String] = ["2018-5-25", "2018-5-26", "2018-5-27", "2018-5-28", "2018-5-29", "2018-5-30"]
+    lazy var titleArray : [String] = ["ubuntu3 内存不足", "ubuntu2 磁盘容量不足5%", "ubuntu4 出流量过大", "ubuntu5 inode空间不足", "ubuntu1 cpu占用过高", "ubuntu6 内存不足"]
     
 //    let kCloseCellHeight: CGFloat = 179
 //    let kOpenCellHeight: CGFloat = 488
@@ -79,7 +68,6 @@ class HomeViewController:  UIViewController {
 //    }
 }
 
-// MARK -- TableView Delegate
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,7 +79,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = self.timeArray[indexPath.row] + "\n" + self.titleArray[indexPath.row]
-        cell.imageView?.image = UIImage(named: self.imageArray[indexPath.row])
+        cell.imageView?.image = UIImage(named: "yellow.jpg")?.reSizeImage(reSize: CGSize(width: 55, height: 50))
         return cell
     }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -180,3 +168,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 //        }, completion: nil)
 //    }
 //}
+
+extension UIImage {
+    func reSizeImage(reSize:CGSize)->UIImage {
+        UIGraphicsBeginImageContextWithOptions(reSize,false,UIScreen.main.scale);
+        self.draw(in: CGRect(x: 0, y: 0, width: reSize.width, height: reSize.height));
+        let reSizeImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
+        UIGraphicsEndImageContext();
+        return reSizeImage;
+    }
+    
+    func scaleImage(scaleSize:CGFloat)->UIImage {
+        let reSize = CGSize(width: self.size.width * scaleSize, height: self.size.height * scaleSize)
+        return reSizeImage(reSize: reSize)
+    }
+}

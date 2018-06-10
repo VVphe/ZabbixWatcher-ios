@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
@@ -14,7 +15,8 @@ let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 class HostViewController: UICollectionViewController {
     
     var hostSearchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH - 130, height: 200))
-    var searchResult = [String]()
+    var searchResult: [JSON] = [JSON]()
+    var allElements: [JSON] = [JSON]()
     
     //var indexPath: IndexPath?
     //var dragingItem: CardCell = CardCell()
@@ -22,6 +24,13 @@ class HostViewController: UICollectionViewController {
     var currentIndexPath: IndexPath?
     var snapedImageView: UIImageView?
     var deltaSize: CGSize!
+    
+    var isDetail: Bool = false
+    var deleteArea: UIButton?
+    
+    var json: JSON?
+    
+    var addBtn: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +40,11 @@ class HostViewController: UICollectionViewController {
         
         //collection layout(custom)
         let layout = CardLayout()
-        layout.itemSize = CGSize(width: SCREEN_WIDTH-80, height: SCREEN_HEIGHT-64-240)
+        layout.itemSize = CGSize(width: SCREEN_WIDTH-80, height: SCREEN_HEIGHT-64-320)
         collectionView?.collectionViewLayout = layout
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPressGesture(_:)))
         collectionView?.addGestureRecognizer(longPress)
+        collectionView?.backgroundColor = UIColor.yellow
 
         //host search bar
         let leftNavBarButton = UIBarButtonItem(customView:hostSearchBar)
@@ -42,8 +52,23 @@ class HostViewController: UICollectionViewController {
         self.navigationItem.hidesSearchBarWhenScrolling = true
         self.hostSearchBar.delegate = self
         self.hostSearchBar.placeholder = "Search for hosts"
-        searchResult = HostsData
         
+        //add button
+        addBtn = UIButton()
+        addBtn?.frame = CGRect(x:320, y: 600, width:50, height:50)
+        addBtn?.layer.masksToBounds = true
+        addBtn?.layer.cornerRadius = (addBtn?.frame.width)! / 2
+        addBtn?.setImage(UIImage(named: "plus"), for: .normal)
+        addBtn?.addTarget(self, action: #selector(btnClick(sender:)), for:.touchUpInside)
+        collectionView?.addSubview(addBtn!)
+        
+        if let dataFromString = HostsData1.data(using: .utf8, allowLossyConversion: false) {
+            json = try? JSON(data: dataFromString)
+        }
+        for j in json! {
+            allElements.append(j.1)
+        }
+        searchResult = allElements
     }
     
     func transform3d() -> CATransform3D {
@@ -73,24 +98,20 @@ extension HostViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCell
-        cell.backgroundColor = UIColor.orange
-        cell.hostIdLabel.text = "\(searchResult[indexPath.row])"
+        //cell.backgroundColor = UIColor(red: 125/255, green: 206/255, blue: 250/255, alpha: 1.0)
+        cell.backgroundColor = UIColor.yellow
+        cell.layer.cornerRadius = 10
+        
+        cell.id = "\(indexPath.row + 1)"
+        cell.hostId = searchResult[indexPath.row]["hostid"].stringValue
+        cell.hostName = searchResult[indexPath.row]["name"].stringValue
+        cell.hostDecription = searchResult[indexPath.row]["description"].stringValue
+        cell.hostStatus = searchResult[indexPath.row]["status"].stringValue
+        cell.hostError = searchResult[indexPath.row]["error"].stringValue
+        cell.hostGroup = searchResult[indexPath.row]["group"].stringValue
+        cell.hostAvailable = searchResult[indexPath.row]["available"].stringValue
         
         return cell
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        UIView.animate(withDuration: 0.2, animations: {
-//            cell?.transform = (cell?.transform.rotated(by: CGFloat(M_PI)))!
-            var allTransofrom = CATransform3DIdentity
-            let rotateTransform = CATransform3DMakeRotation(CGFloat.pi, 0, 1, 0)
-            allTransofrom = CATransform3DConcat(allTransofrom, rotateTransform)
-            allTransofrom = CATransform3DConcat(allTransofrom, self.transform3d())
-            cell?.layer.transform = allTransofrom
-            cell?.alpha = 0.0
-        })
-        
     }
     
     override func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
@@ -103,15 +124,16 @@ extension HostViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if(searchText == "") {
-            searchResult = HostsData
+            searchResult = allElements
         } else {
             searchResult = []
             
-            for arr in HostsData {
-                if(arr.lowercased().hasPrefix(searchText.lowercased())) {
+            for arr in allElements {
+                if(arr["name"].stringValue.lowercased().hasPrefix(searchText.lowercased())) {
                     searchResult.append(arr)
                 }
             }
+            
         }
         
         collectionView?.reloadData()
@@ -123,7 +145,7 @@ extension HostViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         hostSearchBar.text = "Search for hosts"
-        searchResult = HostsData
+        searchResult = allElements
         collectionView?.reloadData()
     }
     
@@ -151,15 +173,29 @@ extension HostViewController {
                     cell!.alpha = 0.0
         
                     collectionView?.addSubview(snapedImageView!)
+                    
+                    deleteArea = UIButton()
+                    deleteArea?.frame = CGRect(x: 0, y: 45, width: SCREEN_WIDTH, height: 100)
+                    
+                    deleteArea?.backgroundColor = UIColor(red: 112/255, green: 128/255, blue: 144/255, alpha: 0.1)
+                    deleteArea?.setTitle("DELETE", for: .normal)
+                    deleteArea?.setTitleColor(UIColor.black, for: .normal)
+                    deleteArea?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+                    view.addSubview(deleteArea!)
             }
             
             case UIGestureRecognizerState.changed:
                 if snapedImageView == nil {return}
                 snapedImageView?.frame.origin.x = point.x - deltaSize.width
                 snapedImageView?.frame.origin.y = point.y - deltaSize.height
+                if point.y <= 84 {
+                    deleteArea?.backgroundColor = UIColor(red: 112/255, green: 128/255, blue: 144/255, alpha: 0.6)
+                } else {
+                    deleteArea?.backgroundColor = UIColor(red: 112/255, green: 128/255, blue: 144/255, alpha: 0.1)
+                }
             
             case UIGestureRecognizerState.ended:
-                if(point.y <= 45) {
+                if(point.y <= 84) {
                     searchResult.remove(at: (currentIndexPath?.row)!)
                     collectionView?.reloadData()
                     
@@ -169,6 +205,8 @@ extension HostViewController {
                     snapedImageView?.alpha = 0.0
                     cell!.alpha = 1.0
                 }
+            
+                deleteArea?.removeFromSuperview()
             //case UIGestureRecognizerState.cancelled:
                 //dragEnded(point: point)
             default: break
@@ -186,28 +224,13 @@ extension HostViewController {
         return gottenImageView
     }
     
-//    func dragBegan(point: CGPoint) {
-//        indexPath = collectionView?.indexPathForItem(at: point)
-//        if (indexPath == nil || (indexPath?.section)! > 0 )
-//        {return}
-//        let item = collectionView?.cellForItem(at: indexPath!) as? CardCell
-//        print(item)
-//        item?.isHidden = true
-//        dragingItem.isHidden = false
-//        dragingItem.frame = (item?.frame)!
-//        dragingItem.backgroundColor = UIColor.orange
-//        dragingItem.transform = CGAffineTransform(scaleX: 2, y: 2)
-//        print(dragingItem)
-//    }
-//
-//    func dragChanged(point: CGPoint) {
-//        if (indexPath == nil || (indexPath?.section)! > 0) {return}
-//        dragingItem.center = point
-//    }
-//
-//    func dragEnded(point: CGPoint) {
-//        if indexPath == nil || (indexPath?.section)! > 0  {return}
-//        let endCell = collectionView?.cellForItem(at: indexPath!)
-//    }
-    
+}
+
+extension HostViewController {
+    @objc func btnClick(sender: UIButton) {
+        let controller = UIStoryboard(name: "HostAdd", bundle: nil).instantiateViewController(withIdentifier: "HostAddViewController") as! HostAddViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+        //self.present(controller, animated: true, completion: nil)
+        
+    }
 }

@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ClusterViewController: UITableViewController {
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
     let kRowsCount = 10
     var cellHeights: [CGFloat] = []
+    
+    var addBtn: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,15 @@ class ClusterViewController: UITableViewController {
         tableView.dataSource = self
         navigationItem.title = "Clusters"
         setup()
+        
+        //add button
+        addBtn = UIButton()
+        addBtn?.frame = CGRect(x:320, y: 600, width:50, height:50)
+        addBtn?.layer.masksToBounds = true
+        addBtn?.layer.cornerRadius = (addBtn?.frame.width)! / 2
+        addBtn?.setImage(UIImage(named: "plus"), for: .normal)
+        addBtn?.addTarget(self, action: #selector(btnClick(sender:)), for:.touchUpInside)
+        tableView?.addSubview(addBtn!)
     }
     //
     private func setup() {
@@ -46,7 +58,7 @@ class ClusterViewController: UITableViewController {
 
 extension ClusterViewController {
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 10
+        return 3
     }
     
     override func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -63,6 +75,16 @@ extension ClusterViewController {
         }
         
         cell.number = indexPath.row
+        
+        if let dataFromString = ClusterData.data(using: .utf8, allowLossyConversion: false) {
+            let json = try? JSON(data: dataFromString)
+            print(json![indexPath.row]["name"])
+            cell.hostName = json![indexPath.row]["name"].stringValue
+            cell.hostIp = json![indexPath.row]["ip"].stringValue
+            cell.hostPort = json![indexPath.row]["port"].stringValue
+            cell.hostDns = json![indexPath.row]["dns"].stringValue
+            cell.hostDescription = json![indexPath.row]["description"].stringValue
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -114,4 +136,13 @@ extension ClusterViewController {
         return [delete]
     }
 
+}
+
+extension ClusterViewController {
+    @objc func btnClick(sender: UIButton) {
+        let controller = UIStoryboard(name: "ClusterAdd", bundle: nil).instantiateViewController(withIdentifier: "ClusterAddViewController") as! ClusterAddViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+        //self.present(controller, animated: true, completion: nil)
+        
+    }
 }

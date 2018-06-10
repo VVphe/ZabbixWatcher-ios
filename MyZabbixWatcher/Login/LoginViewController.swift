@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import Toaster
 
 class LoginViewController: VideoSplashViewController{
     
@@ -53,7 +54,8 @@ class LoginViewController: VideoSplashViewController{
     
     func setupVideoBackground() {
         
-        let videoPath = Bundle.main.path(forResource: "spotify", ofType: "mp4")
+        let videoPath = Bundle.main.path(forResource: "mainbg", ofType: "mp4")
+        print(videoPath)
         let videoUrl = URL(fileURLWithPath: videoPath!)
         
         videoFrame = view.frame
@@ -68,11 +70,27 @@ class LoginViewController: VideoSplashViewController{
     }
     
     @objc func goHomePage(sender: UIButton) {
-//        let controller = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! SideViewController
-        //self.navigationController?.pushViewController(controller, animated: true)
-        let controller = UIStoryboard(name: "Items", bundle: nil).instantiateViewController(withIdentifier: "ItemViewController") as! ItemViewController
-        //self.present(controller, animated: true, completion: nil)
-        self.navigationController?.pushViewController(controller, animated: true)
+        let params: Parameters = ["username": usernameTextField.text as! String, "password": passwordTextField.text as! String]
+        Alamofire.request("http://127.0.0.1:8080/login", method: .get, parameters: params).responseString {
+            response in
+            switch(response.result.value!) {
+            case "success":
+                Toast(text: "Login success").show()
+                let controller = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! SideViewController
+                //self.navigationController?.pushViewController(controller, animated: true)
+                //        let controller = UIStoryboard(name: "ClusterAdd", bundle: nil).instantiateViewController(withIdentifier: "ClusterAddViewController") as! ClusterAddViewController
+                //self.present(controller, animated: true, completion: nil)
+                self.navigationController?.pushViewController(controller, animated: true)
+            case "none":
+                Toast(text: "No such user").show()
+            case "wrongPassword":
+                Toast(text: "Wrong password").show()
+            default:
+                Toast(text: "Login failed").show()
+            }
+        }
+        
+        
     }
     
 }

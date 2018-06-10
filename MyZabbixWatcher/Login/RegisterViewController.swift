@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import Toaster
 
 class RegisterViewController: UIViewController {
     
@@ -17,7 +19,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+    @IBOutlet weak var confirmTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     
     override func viewDidLoad() {
@@ -63,4 +65,34 @@ class RegisterViewController: UIViewController {
         navigationItem.title = "Register"
     }
     
+    @IBAction func register(_ sender: UIButton) {
+        if usernameTextField.text as! String == "" {
+            Toast(text: "Username cannot be empty").show()
+            return
+        }
+        if passwordTextField.text as! String == "" {
+            Toast(text: "Password cannot be empty").show()
+            return
+        }
+        if confirmTextField.text as! String == "" {
+            Toast(text: "Please confirm your password").show()
+            return
+        }
+        if passwordTextField.text as! String != confirmTextField.text as! String {
+            Toast(text: "Please reconfirm your password").show()
+            return
+        }
+        let params: Parameters = ["username": usernameTextField.text as! String, "password": passwordTextField.text as! String]
+        Alamofire.request("http://127.0.0.1:8080/register", method: .get, parameters: params).responseString {
+            response in
+            switch(response.result.value!) {
+            case "exist":
+                Toast(text: "Username has been registered").show()
+            case "success":
+                Toast(text: "Register success").show()
+            default:
+                Toast(text: "Register fail").show()
+            }
+        }
+    }
 }
